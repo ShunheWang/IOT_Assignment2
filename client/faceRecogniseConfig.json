@@ -1,0 +1,5 @@
+{
+    "dataset": "dataset",
+    "encodings": "encodings.pickle",
+    "detection_method":"hog"
+}

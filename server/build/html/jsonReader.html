@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>jsonReader module &#8212; smart-library-server 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-jsonReader">
+<span id="jsonreader-module"></span><h1>jsonReader module<a class="headerlink" href="#module-jsonReader" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="jsonReader.dbConfigReader">
+<em class="property">class </em><code class="descclassname">jsonReader.</code><code class="descname">dbConfigReader</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.dbConfigReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#jsonReader.jasonReader" title="jsonReader.jasonReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">jsonReader.jasonReader</span></code></a></p>
+<p>A class used to represent read database seting json data
+…
+Attributes
+———-
+filename : str</p>
+<blockquote>
+<div><p>file name of the json file</p>
+</div></blockquote>
+<dl class="simple">
+<dt>getHost()</dt><dd><p>getter function for host address</p>
+</dd>
+<dt>getUser()</dt><dd><p>getter function for user name</p>
+</dd>
+<dt>getPassword()</dt><dd><p>getter function for password</p>
+</dd>
+<dt>getDatabase()</dt><dd><p>getter function for databse name</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="jsonReader.dbConfigReader.getDatabase">
+<code class="descname">getDatabase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.dbConfigReader.getDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter function for password</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jsonReader.dbConfigReader.getHost">
+<code class="descname">getHost</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.dbConfigReader.getHost" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter function for host address</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jsonReader.dbConfigReader.getPassword">
+<code class="descname">getPassword</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.dbConfigReader.getPassword" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter function for password</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jsonReader.dbConfigReader.getUser">
+<code class="descname">getUser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.dbConfigReader.getUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter function for user name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="jsonReader.jasonReader">
+<em class="property">class </em><code class="descclassname">jsonReader.</code><code class="descname">jasonReader</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.jasonReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent read json data
+…
+Attributes
+———-
+filename : str</p>
+<blockquote>
+<div><p>file name of the json file</p>
+</div></blockquote>
+<dl class="simple">
+<dt>checkFileExist()</dt><dd><p>Check the exisiting of the file</p>
+</dd>
+<dt>loadFile()</dt><dd><p>load the json file</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="jsonReader.jasonReader.checkFileExist">
+<code class="descname">checkFileExist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.jasonReader.checkFileExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the exisiting of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jsonReader.jasonReader.loadFile">
+<code class="descname">loadFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jsonReader.jasonReader.loadFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>load the json file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">smart-library-server</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Sun He.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/jsonReader.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

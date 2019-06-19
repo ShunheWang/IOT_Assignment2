@@ -1,0 +1,7 @@
+\.\_menu module
+===============
+
+.. automodule:: ._menu
+    :members:
+    :undoc-members:
+    :show-inheritance:

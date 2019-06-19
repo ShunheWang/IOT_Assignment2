@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>database_utils module &#8212; smart-library-flask 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-database_utils">
+<span id="database-utils-module"></span><h1>database_utils module<a class="headerlink" href="#module-database_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="database_utils.DatabaseUtils">
+<em class="property">class </em><code class="descclassname">database_utils.</code><code class="descname">DatabaseUtils</code><span class="sig-paren">(</span><em>connection=None</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="database_utils.DatabaseUtils.DATABASE">
+<code class="descname">DATABASE</code><em class="property"> = 'People'</em><a class="headerlink" href="#database_utils.DatabaseUtils.DATABASE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="database_utils.DatabaseUtils.HOST">
+<code class="descname">HOST</code><em class="property"> = '35.197.171.6'</em><a class="headerlink" href="#database_utils.DatabaseUtils.HOST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="database_utils.DatabaseUtils.PASSWORD">
+<code class="descname">PASSWORD</code><em class="property"> = 'root'</em><a class="headerlink" href="#database_utils.DatabaseUtils.PASSWORD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="database_utils.DatabaseUtils.USER">
+<code class="descname">USER</code><em class="property"> = 'root'</em><a class="headerlink" href="#database_utils.DatabaseUtils.USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.createBooksTable">
+<code class="descname">createBooksTable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.createBooksTable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.deletePerson">
+<code class="descname">deletePerson</code><span class="sig-paren">(</span><em>ISBN</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.deletePerson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getBook">
+<code class="descname">getBook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getBook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getBookSequence">
+<code class="descname">getBookSequence</code><span class="sig-paren">(</span><em>Title</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getBookSequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getBookState">
+<code class="descname">getBookState</code><span class="sig-paren">(</span><em>Bookid</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getBookState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getBookborrow">
+<code class="descname">getBookborrow</code><span class="sig-paren">(</span><em>Bookid</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getBookborrow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getTitle">
+<code class="descname">getTitle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getTitle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.insertBook">
+<code class="descname">insertBook</code><span class="sig-paren">(</span><em>ISBN</em>, <em>AuthorName</em>, <em>BookName</em>, <em>Avaliable</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.insertBook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.searchBookAuthorName">
+<code class="descname">searchBookAuthorName</code><span class="sig-paren">(</span><em>AuthorName</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.searchBookAuthorName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.searchBookBookName">
+<code class="descname">searchBookBookName</code><span class="sig-paren">(</span><em>BookName</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.searchBookBookName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.searchBookISBN">
+<code class="descname">searchBookISBN</code><span class="sig-paren">(</span><em>ISBN</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.searchBookISBN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">smart-library-flask</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Sun He.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/database_utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

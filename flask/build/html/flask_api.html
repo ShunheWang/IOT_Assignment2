@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>flask_api module &#8212; smart-library-flask 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-flask_api">
+<span id="flask-api-module"></span><h1>flask_api module<a class="headerlink" href="#module-flask_api" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="flask_api.Books">
+<em class="property">class </em><code class="descclassname">flask_api.</code><code class="descname">Books</code><span class="sig-paren">(</span><em>Title</em>, <em>Author</em>, <em>PublishedDate</em>, <em>Status</em>, <em>ISBN</em>, <em>SequenceNo</em>, <em>BookID=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.Books" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<dl class="attribute">
+<dt id="flask_api.Books.Author">
+<code class="descname">Author</code><a class="headerlink" href="#flask_api.Books.Author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.Books.BookID">
+<code class="descname">BookID</code><a class="headerlink" href="#flask_api.Books.BookID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.Books.ISBN">
+<code class="descname">ISBN</code><a class="headerlink" href="#flask_api.Books.ISBN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.Books.PublishedDate">
+<code class="descname">PublishedDate</code><a class="headerlink" href="#flask_api.Books.PublishedDate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.Books.SequenceNo">
+<code class="descname">SequenceNo</code><a class="headerlink" href="#flask_api.Books.SequenceNo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.Books.Status">
+<code class="descname">Status</code><a class="headerlink" href="#flask_api.Books.Status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.Books.Title">
+<code class="descname">Title</code><a class="headerlink" href="#flask_api.Books.Title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="flask_api.BooksSchema">
+<em class="property">class </em><code class="descclassname">flask_api.</code><code class="descname">BooksSchema</code><span class="sig-paren">(</span><em>strict=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.BooksSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_marshmallow.schema.Schema</span></code></p>
+<dl class="class">
+<dt id="flask_api.BooksSchema.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#flask_api.BooksSchema.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="flask_api.BooksSchema.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ('BookID', 'Title', 'Author', 'PublishedDate', 'Status', 'ISBN', 'SequenceNo')</em><a class="headerlink" href="#flask_api.BooksSchema.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="flask_api.BooksSchema.opts">
+<code class="descname">opts</code><em class="property"> = &lt;marshmallow.schema.SchemaOpts object&gt;</em><a class="headerlink" href="#flask_api.BooksSchema.opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_api.addBook">
+<code class="descclassname">flask_api.</code><code class="descname">addBook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.addBook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="flask_api.bookDelete">
+<code class="descclassname">flask_api.</code><code class="descname">bookDelete</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.bookDelete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="flask_api.bookUpdate">
+<code class="descclassname">flask_api.</code><code class="descname">bookUpdate</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.bookUpdate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="flask_api.getBook">
+<code class="descclassname">flask_api.</code><code class="descname">getBook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.getBook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="flask_api.getBookWithID">
+<code class="descclassname">flask_api.</code><code class="descname">getBookWithID</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_api.getBookWithID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="flask_api.ma">
+<code class="descclassname">flask_api.</code><code class="descname">ma</code><em class="property"> = &lt;flask_marshmallow.Marshmallow object&gt;</em><a class="headerlink" href="#flask_api.ma" title="Permalink to this definition">¶</a></dt>
+<dd><p>function addBook/getBook/getBookWithID/bookDelete delete by 
+id ,update</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">smart-library-flask</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Sun He.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/flask_api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

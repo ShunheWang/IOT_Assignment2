@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>database_utils module &#8212; smart-library-server 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-database_utils">
+<span id="database-utils-module"></span><h1>database_utils module<a class="headerlink" href="#module-database_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="database_utils.DatabaseUtils">
+<em class="property">class </em><code class="descclassname">database_utils.</code><code class="descname">DatabaseUtils</code><a class="headerlink" href="#database_utils.DatabaseUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to handle database operation
+…
+Methods
+——-
+insertUser(UserName, Name)</p>
+<blockquote>
+<div><p>Check the exisiting of the file</p>
+</div></blockquote>
+<dl class="simple">
+<dt>getUser(UserName)</dt><dd><p>load the json file</p>
+</dd>
+<dt>insertBookTransaction(LmsUserID, BookID, BorrowedDate, CalenderLink)  </dt><dd><p>insert book transaction</p>
+</dd>
+<dt>updateBookStatus(BookID, status)</dt><dd><p>update book status</p>
+</dd>
+<dt>updateBookTransaction(BookBorrowedID, status, ReturnedDate)</dt><dd><p>update book transaction</p>
+</dd>
+<dt>searchBooks(title)</dt><dd><p>search books record</p>
+</dd>
+<dt>searchBooksAuthur(Author)</dt><dd><p>search books record base on authur name</p>
+</dd>
+<dt>searchBooksISBN(ISBN)</dt><dd><p>search books record base on isbn</p>
+</dd>
+<dt>listBooks()</dt><dd><p>list all the books</p>
+</dd>
+<dt>getBook(BookID)</dt><dd><p>get book base on book id</p>
+</dd>
+<dt>getBookISBN(ISBN)</dt><dd><p>get book base on ISBN</p>
+</dd>
+<dt>listReturnBooks(userID)</dt><dd><p>list the available borrowed book that the user got</p>
+</dd>
+<dt>getReturnBook(userID, BookID)</dt><dd><p>get the return book base on the book id</p>
+</dd>
+<dt>borrowBook(LmsUserID, BookID, BorrowedDate, CalenderLink)</dt><dd><p>operation for borrow book</p>
+</dd>
+<dt>returnBook(BookBorrowedID, BookID, ReturnedDate)</dt><dd><p>operation for return book</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.borrowBook">
+<code class="descname">borrowBook</code><span class="sig-paren">(</span><em>LmsUserID</em>, <em>BookID</em>, <em>BorrowedDate</em>, <em>CalenderLink</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.borrowBook" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>LmsUserID<span class="classifier">int</span></dt><dd><p>user’s record id</p>
+</dd>
+<dt>BookID<span class="classifier">int</span></dt><dd><p>book record id</p>
+</dd>
+<dt>BorrowedDate<span class="classifier">date</span></dt><dd><p>borrow book date</p>
+</dd>
+<dt>CalenderLink<span class="classifier">str</span></dt><dd><p>calender link html link</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getBook">
+<code class="descname">getBook</code><span class="sig-paren">(</span><em>BookID</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getBook" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>BookID<span class="classifier">int</span></dt><dd><p>book record id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getBookISBN">
+<code class="descname">getBookISBN</code><span class="sig-paren">(</span><em>ISBN</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getBookISBN" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>ISBN<span class="classifier">str</span></dt><dd><p>book ISBN</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getReturnBook">
+<code class="descname">getReturnBook</code><span class="sig-paren">(</span><em>userID</em>, <em>BookID</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getReturnBook" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>userID<span class="classifier">int</span></dt><dd><p>user’s record id</p>
+</dd>
+<dt>BookID<span class="classifier">int</span></dt><dd><p>book record id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.getUser">
+<code class="descname">getUser</code><span class="sig-paren">(</span><em>UserName</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.getUser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>UserName<span class="classifier">str</span></dt><dd><p>user’s login name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.insertBookTransaction">
+<code class="descname">insertBookTransaction</code><span class="sig-paren">(</span><em>LmsUserID</em>, <em>BookID</em>, <em>BorrowedDate</em>, <em>CalenderLink</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.insertBookTransaction" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>LmsUserID<span class="classifier">int</span></dt><dd><p>user’s record id</p>
+</dd>
+<dt>BookID<span class="classifier">str</span></dt><dd><p>book record id</p>
+</dd>
+<dt>BorrowedDate<span class="classifier">date</span></dt><dd><p>book borrow date</p>
+</dd>
+<dt>CalenderLink<span class="classifier">str</span></dt><dd><p>calender link html link</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.insertUser">
+<code class="descname">insertUser</code><span class="sig-paren">(</span><em>UserName</em>, <em>Name</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.insertUser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>UserName<span class="classifier">str</span></dt><dd><p>user’s login name</p>
+</dd>
+<dt>Name<span class="classifier">str</span></dt><dd><p>user’s name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.listBooks">
+<code class="descname">listBooks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.listBooks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.listReturnBooks">
+<code class="descname">listReturnBooks</code><span class="sig-paren">(</span><em>userID</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.listReturnBooks" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>UserName<span class="classifier">str</span></dt><dd><p>user’s login name</p>
+</dd>
+<dt>Name<span class="classifier">str</span></dt><dd><p>user’s name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.returnBook">
+<code class="descname">returnBook</code><span class="sig-paren">(</span><em>BookBorrowedID</em>, <em>BookID</em>, <em>ReturnedDate</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.returnBook" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>BookBorrowedID<span class="classifier">id</span></dt><dd><p>user’s login name</p>
+</dd>
+<dt>BookID<span class="classifier">id</span></dt><dd><p>user’s name</p>
+</dd>
+<dt>ReturnedDate<span class="classifier">date</span></dt><dd><p>return book date</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.searchBooks">
+<code class="descname">searchBooks</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.searchBooks" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>title<span class="classifier">str</span></dt><dd><p>book title</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.searchBooksAuthur">
+<code class="descname">searchBooksAuthur</code><span class="sig-paren">(</span><em>Author</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.searchBooksAuthur" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Author<span class="classifier">str</span></dt><dd><p>book authur name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.searchBooksISBN">
+<code class="descname">searchBooksISBN</code><span class="sig-paren">(</span><em>ISBN</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.searchBooksISBN" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>ISBN<span class="classifier">str</span></dt><dd><p>book ISBN</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.updateBookStatus">
+<code class="descname">updateBookStatus</code><span class="sig-paren">(</span><em>BookID</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.updateBookStatus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>BookID<span class="classifier">int</span></dt><dd><p>book record id</p>
+</dd>
+<dt>status<span class="classifier">str</span></dt><dd><p>book status</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="database_utils.DatabaseUtils.updateBookTransaction">
+<code class="descname">updateBookTransaction</code><span class="sig-paren">(</span><em>BookBorrowedID</em>, <em>status</em>, <em>ReturnedDate</em><span class="sig-paren">)</span><a class="headerlink" href="#database_utils.DatabaseUtils.updateBookTransaction" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>BookBorrowedID<span class="classifier">int</span></dt><dd><p>user’s login name</p>
+</dd>
+<dt>status<span class="classifier">str</span></dt><dd><p>book status</p>
+</dd>
+<dt>ReturnedDate<span class="classifier">date</span></dt><dd><p>book return date</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">smart-library-server</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Sun He.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/database_utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
